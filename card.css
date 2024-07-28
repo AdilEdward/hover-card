@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+section{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #121321;
+    color: white;
+}
+
+section::before{
+      content: '';
+      position: absolute;
+      width: 240px;
+      height: 240px;
+      border-radius: 50%;
+      background: linear-gradient(#9c27be,#f3f5f5);
+      transform: translate(-150px,-100px);
+
+}
+section::after{
+    content: '';
+    position: absolute;
+    width: 240px;
+    height: 240px;
+    border-radius: 50%;
+    background: linear-gradient(#9c27be,#f3f5f5);
+    transform: translate(150px,100px);
+
+}
+.container{
+    height: 200px;
+    width: 310px;
+    z-index: 1;
+    position: relative;  
+    transition: all .5s linear;
+    
+  
+}
+
+.container:hover{
+
+    transform: rotatey(-180deg);
+}
+.container .card{
+    height: 100%;
+    width: 100%;
+    padding: 10px;
+    position: absolute;
+    backface-visibility: hidden;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 25px;
+    box-shadow: 0 25px 45px rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(25px);
+    border: 3px solid rgba(255, 255, 255, 0.1);
+}
+
+.front-face .logo img{
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    border: 3px solid #9c27be;
+}
+
+h5{
+    font-size: 16px;
+    font-weight: 400;
+}
+
+ .card .back-face{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: rotateY(180deg);
+    border: none;
+}
