@@ -76,10 +76,10 @@ h5{
     font-weight: 400;
 }
 
- .card .back-face{
+ /* .card .back-face{
     display: flex;
     align-items: center;
     justify-content: center;
     transform: rotateY(180deg);
     border: none;
-}
+} */
